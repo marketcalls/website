@@ -12,9 +12,9 @@ A professional money management education platform for traders, built with Flask
 
 ## Tech Stack
 
-- **Backend**: Flask (Python)
+- **Backend**: Flask (Python) - Serverless Functions
 - **Frontend**: Tailwind CSS + Preline UI (via CDN)
-- **Deployment**: Vercel
+- **Deployment**: Vercel (Serverless)
 
 ## Local Development
 
