@@ -1,0 +1,597 @@
+{% extends "base.html" %}
+
+{% block title %}Trading Psychology - Van Tharp's Principles{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-br from-indigo-400 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="floating absolute top-20 right-20 text-indigo-200">
+            <i class="fas fa-brain text-8xl"></i>
+        </div>
+        <div class="floating absolute bottom-20 left-20 text-purple-200" style="animation-delay: 3s;">
+            <i class="fas fa-head-side-virus text-8xl"></i>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white text-sm font-medium mb-6 shadow-lg">
+            <span class="mr-2">🧠</span>
+            <span>Van Tharp's Revolutionary Methods</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+            Trading Psychology
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Masterclass</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl text-gray-700 mb-4 font-medium">
+            Transform your mindset, transform your trading
+        </p>
+
+        <p class="text-lg text-gray-600 mb-8">
+            Learn the psychological principles that separate elite traders from the rest
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-indigo-100">
+                <span class="font-bold text-indigo-600">60%</span>
+                <span class="font-medium ml-1">Psychology</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-purple-100">
+                <span class="font-bold text-purple-600">30%</span>
+                <span class="font-medium ml-1">Position Sizing</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-pink-100">
+                <span class="font-bold text-pink-600">10%</span>
+                <span class="font-medium ml-1">System</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Introduction -->
+<div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+        <div class="flex items-start space-x-4 mb-6">
+            <div class="flex-shrink-0">
+                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-2xl text-purple-600"></i>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-3">Who is Van Tharp?</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Dr. Van K. Tharp is a legendary trading coach and psychologist who has trained thousands of traders worldwide. Featured in Jack Schwager's Market Wizards, he discovered that successful trading is 60% psychology, 30% money management (position sizing), and only 10% system.
+                </p>
+                <div class="mt-4 p-4 bg-indigo-50 rounded-lg">
+                    <p class="text-indigo-800 italic">
+                        "You don't trade the markets; you trade your beliefs about the markets."
+                    </p>
+                    <p class="text-sm text-indigo-600 mt-2">- Van Tharp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Concept 1: The Trading Success Formula -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">The Trading Success Formula</h2>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 text-center">
+                <div class="text-4xl font-bold text-purple-600 mb-2">60%</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Psychology</h3>
+                <p class="text-gray-600">Your mindset, emotions, and discipline</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 text-center">
+                <div class="text-4xl font-bold text-blue-600 mb-2">30%</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Position Sizing</h3>
+                <p class="text-gray-600">How much you risk on each trade</p>
+            </div>
+            <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 text-center">
+                <div class="text-4xl font-bold text-green-600 mb-2">10%</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">System</h3>
+                <p class="text-gray-600">Your entry and exit rules</p>
+            </div>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg">
+            <div class="flex items-start">
+                <i class="fas fa-lightbulb text-yellow-600 mt-1 mr-3"></i>
+                <div>
+                    <h3 class="font-semibold text-gray-800 mb-2">Key Insight</h3>
+                    <p class="text-gray-700">Most traders spend 90% of their time on the system (the least important part) and ignore psychology and position sizing. This is why 90% of traders fail!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Concept 2: Responsibility -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">🎯 The Power of Responsibility</h2>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">What Van Tharp Teaches:</h3>
+                <p class="text-gray-600 mb-4">
+                    The #1 trait of successful traders is taking 100% responsibility for their results. Van calls this "Response-ability" - your ability to respond to any situation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-red-50 rounded-lg p-6">
+                    <h4 class="font-semibold text-red-800 mb-3">❌ Victim Mindset</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• "The market makers got me"</li>
+                        <li>• "My broker gave bad advice"</li>
+                        <li>• "The system doesn't work"</li>
+                        <li>• "I was just unlucky"</li>
+                        <li>• "The market is rigged"</li>
+                    </ul>
+                    <p class="text-red-600 font-semibold mt-4">Result: Repeat the same mistakes</p>
+                </div>
+
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h4 class="font-semibold text-green-800 mb-3">✅ Responsibility Mindset</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• "How did I create this loss?"</li>
+                        <li>• "What can I learn from this?"</li>
+                        <li>• "How can I improve my process?"</li>
+                        <li>• "What rule did I break?"</li>
+                        <li>• "How can I prevent this?"</li>
+                    </ul>
+                    <p class="text-green-600 font-semibold mt-4">Result: Continuous improvement</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-lg p-6">
+                <h4 class="font-semibold text-indigo-800 mb-3">🌟 Real Example from Van's Workshop</h4>
+                <p class="text-gray-700 mb-3">
+                    A quadriplegic trader (paralyzed from a football accident) initially rejected the idea of responsibility. "How could I be responsible for my accident?" he asked.
+                </p>
+                <p class="text-gray-700 mb-3">
+                    But when he accepted even 1% responsibility - maybe his mental state made him take unnecessary risks - everything changed. He realized: "If I'm responsible, I can change my future."
+                </p>
+                <p class="text-indigo-700 font-semibold">
+                    He went from victim to victor, becoming independent and successful.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Concept 3: The Marble Game -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">🎲 The Famous Marble Game</h2>
+
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
+            <p class="text-lg text-gray-700 mb-4">
+                Van Tharp's marble game demonstrates how the same trading system produces different results for different people.
+            </p>
+
+            <div class="bg-white rounded-lg p-6 mb-6">
+                <h3 class="font-semibold text-gray-800 mb-3">The Setup:</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• <strong>System:</strong> 60% winning trades, 40% losing trades</li>
+                    <li>• <strong>Win/Loss Ratio:</strong> Winners pay 10:1, Losers cost 1:1</li>
+                    <li>• <strong>Expectancy:</strong> Highly positive (great system!)</li>
+                    <li>• <strong>Participants:</strong> 30 traders with identical starting capital</li>
+                </ul>
+            </div>
+
+            <div class="bg-yellow-100 rounded-lg p-6 mb-6">
+                <h3 class="font-semibold text-yellow-800 mb-3">🔍 The Shocking Results:</h3>
+                <p class="text-gray-700 mb-3">After 100 trades with the EXACT same system:</p>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• 1/3 went bankrupt</li>
+                    <li>• 1/3 lost money</li>
+                    <li>• 1/3 made money (some made fortunes)</li>
+                    <li>• <strong>All 30 traders had different final equities!</strong></li>
+                </ul>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-red-100 rounded-lg p-4">
+                    <h4 class="font-semibold text-red-800 mb-2">Why People Failed:</h4>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li>• Bet too much (poor position sizing)</li>
+                        <li>• Increased bets after losses</li>
+                        <li>• Got emotional after streaks</li>
+                        <li>• Didn't follow the rules</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 rounded-lg p-4">
+                    <h4 class="font-semibold text-green-800 mb-2">Why People Succeeded:</h4>
+                    <ul class="space-y-1 text-sm text-gray-700">
+                        <li>• Consistent position sizing</li>
+                        <li>• Followed rules exactly</li>
+                        <li>• Stayed disciplined</li>
+                        <li>• Managed emotions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 text-white rounded-lg p-6 text-center">
+            <p class="text-xl font-semibold mb-2">The Lesson:</p>
+            <p class="text-lg">Your system doesn't determine your success - YOUR BEHAVIOR does!</p>
+        </div>
+    </div>
+
+    <!-- Core Concept 4: Managing Emotional States -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">🧠 The Wizard Technique</h2>
+        <p class="text-lg text-gray-600 mb-6">Van Tharp's famous technique for instantly changing your emotional state during trading.</p>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">When You're in a Bad State (Angry, Fearful, Frustrated):</h3>
+
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white font-bold text-sm">1</span>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Stand Up & Move</h4>
+                            <p class="text-gray-600">Immediately change your physical position. Movement breaks the emotional pattern.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white font-bold text-sm">2</span>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Dissociate - Watch Yourself</h4>
+                            <p class="text-gray-600">Step back mentally and observe yourself as if watching a movie. See yourself sitting there in that emotional state.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white font-bold text-sm">3</span>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Model a Super Trader</h4>
+                            <p class="text-gray-600">Imagine how Warren Buffett or your trading hero would handle this exact situation. How would they sit? Breathe? React?</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-purple-600 text-white font-bold text-sm">4</span>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Assume Their State</h4>
+                            <p class="text-gray-600">Physically adopt their posture, breathing, and mindset. Become that calm, confident trader.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-indigo-50 rounded-lg p-6">
+                <h4 class="font-semibold text-indigo-800 mb-3">💪 Why This Works:</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• <strong>Physiology:</strong> Changing posture instantly changes brain chemistry</li>
+                    <li>• <strong>Psychology:</strong> Dissociation reduces emotional intensity by 80%</li>
+                    <li>• <strong>Modeling:</strong> Your brain can't tell the difference between real and imagined</li>
+                    <li>• <strong>Practice:</strong> Do this 20 times and it becomes automatic</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Concept 5: Mental Rehearsal -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">🎯 Mental Rehearsal Like Champions</h2>
+
+        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8">
+            <div class="mb-6">
+                <p class="text-lg text-gray-700 mb-4">
+                    Every top athlete uses mental rehearsal. Van Tharp teaches traders to do the same.
+                </p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 mb-6">
+                <h3 class="font-semibold text-gray-800 mb-4">Jack Nicklaus's Golf Method (Applied to Trading):</h3>
+
+                <div class="space-y-3">
+                    <div class="flex items-center">
+                        <i class="fas fa-eye text-blue-600 mr-3"></i>
+                        <p class="text-gray-700"><strong>See the result:</strong> Visualize your profitable trade closing</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-chart-line text-green-600 mr-3"></i>
+                        <p class="text-gray-700"><strong>See the path:</strong> Watch the price movement that leads there</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-user text-purple-600 mr-3"></i>
+                        <p class="text-gray-700"><strong>See yourself:</strong> Watch yourself executing perfectly</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-brain text-orange-600 mr-3"></i>
+                        <p class="text-gray-700"><strong>Feel it:</strong> Experience making the trade from inside</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-play text-red-600 mr-3"></i>
+                        <p class="text-gray-700"><strong>Do it:</strong> Execute in reality what you rehearsed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-blue-100 rounded-lg p-6">
+                    <h4 class="font-semibold text-blue-800 mb-3">Morning Rehearsal (5 mins):</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• Visualize following your rules perfectly</li>
+                        <li>• See yourself staying calm in volatility</li>
+                        <li>• Imagine handling losses professionally</li>
+                        <li>• Picture taking profits at targets</li>
+                    </ul>
+                </div>
+                <div class="bg-green-100 rounded-lg p-6">
+                    <h4 class="font-semibold text-green-800 mb-3">Evening Review (5 mins):</h4>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li>• Review what went well</li>
+                        <li>• Identify one improvement</li>
+                        <li>• Rehearse doing it better</li>
+                        <li>• Celebrate following your rules</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Self-Assessment -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">📊 Van Tharp's Self-Assessment</h2>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <p class="text-gray-600 mb-6">Rate yourself 0-4 on each item (0 = never, 4 = always):</p>
+
+            <div class="space-y-4 mb-6">
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                    <span class="text-gray-700">I take losses personally</span>
+                    <div class="flex space-x-2">
+                        <span class="text-xs text-gray-500">Never</span>
+                        <button class="w-8 h-8 bg-white border rounded">0</button>
+                        <button class="w-8 h-8 bg-white border rounded">1</button>
+                        <button class="w-8 h-8 bg-white border rounded">2</button>
+                        <button class="w-8 h-8 bg-white border rounded">3</button>
+                        <button class="w-8 h-8 bg-white border rounded">4</button>
+                        <span class="text-xs text-gray-500">Always</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                    <span class="text-gray-700">I blame others for my problems</span>
+                    <div class="flex space-x-2">
+                        <span class="text-xs text-gray-500">Never</span>
+                        <button class="w-8 h-8 bg-white border rounded">0</button>
+                        <button class="w-8 h-8 bg-white border rounded">1</button>
+                        <button class="w-8 h-8 bg-white border rounded">2</button>
+                        <button class="w-8 h-8 bg-white border rounded">3</button>
+                        <button class="w-8 h-8 bg-white border rounded">4</button>
+                        <span class="text-xs text-gray-500">Always</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                    <span class="text-gray-700">I need to defend my actions</span>
+                    <div class="flex space-x-2">
+                        <span class="text-xs text-gray-500">Never</span>
+                        <button class="w-8 h-8 bg-white border rounded">0</button>
+                        <button class="w-8 h-8 bg-white border rounded">1</button>
+                        <button class="w-8 h-8 bg-white border rounded">2</button>
+                        <button class="w-8 h-8 bg-white border rounded">3</button>
+                        <button class="w-8 h-8 bg-white border rounded">4</button>
+                        <span class="text-xs text-gray-500">Always</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                    <span class="text-gray-700">I get jealous of others' success</span>
+                    <div class="flex space-x-2">
+                        <span class="text-xs text-gray-500">Never</span>
+                        <button class="w-8 h-8 bg-white border rounded">0</button>
+                        <button class="w-8 h-8 bg-white border rounded">1</button>
+                        <button class="w-8 h-8 bg-white border rounded">2</button>
+                        <button class="w-8 h-8 bg-white border rounded">3</button>
+                        <button class="w-8 h-8 bg-white border rounded">4</button>
+                        <span class="text-xs text-gray-500">Always</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                    <span class="text-gray-700">I need approval to feel good</span>
+                    <div class="flex space-x-2">
+                        <span class="text-xs text-gray-500">Never</span>
+                        <button class="w-8 h-8 bg-white border rounded">0</button>
+                        <button class="w-8 h-8 bg-white border rounded">1</button>
+                        <button class="w-8 h-8 bg-white border rounded">2</button>
+                        <button class="w-8 h-8 bg-white border rounded">3</button>
+                        <button class="w-8 h-8 bg-white border rounded">4</button>
+                        <span class="text-xs text-gray-500">Always</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-6">
+                <h4 class="font-semibold text-orange-800 mb-3">Your Score Means:</h4>
+                <ul class="space-y-2 text-gray-700">
+                    <li>• <strong>0-5:</strong> Excellent mindset for trading</li>
+                    <li>• <strong>6-10:</strong> Good foundation, minor work needed</li>
+                    <li>• <strong>11-15:</strong> Some psychological barriers to address</li>
+                    <li>• <strong>16-20:</strong> Significant mindset work required</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Lessons -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">🎓 Van Tharp's 10 Key Lessons</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="font-semibold text-gray-800 mb-4">The Fundamentals:</h3>
+                <ol class="space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="font-bold text-purple-600 mr-2">1.</span>
+                        <span>You are responsible for all your trading results</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-purple-600 mr-2">2.</span>
+                        <span>Losses are just feedback, not failures</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-purple-600 mr-2">3.</span>
+                        <span>Your beliefs about yourself affect every trade</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-purple-600 mr-2">4.</span>
+                        <span>Emotions are signals to pay attention to</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-purple-600 mr-2">5.</span>
+                        <span>Good trading is boring (excitement = danger)</span>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="font-semibold text-gray-800 mb-4">The Advanced:</h3>
+                <ol class="space-y-3 text-gray-700" start="6">
+                    <li class="flex items-start">
+                        <span class="font-bold text-blue-600 mr-2">6.</span>
+                        <span>Position sizing determines your returns</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-blue-600 mr-2">7.</span>
+                        <span>Expect long losing streaks (even with 60% winners)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-blue-600 mr-2">8.</span>
+                        <span>Your system must fit your personality</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-blue-600 mr-2">9.</span>
+                        <span>Mental rehearsal programs success</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="font-bold text-blue-600 mr-2">10.</span>
+                        <span>Trading is a business - have a written plan</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical Exercises -->
+    <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">🏋️ Daily Practice Exercises</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6">
+                <div class="text-center mb-4">
+                    <i class="fas fa-sun text-4xl text-purple-600"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-3">Morning (5 mins)</h3>
+                <ol class="space-y-2 text-sm text-gray-700">
+                    <li>1. Review your trading rules</li>
+                    <li>2. Mentally rehearse following them</li>
+                    <li>3. Set your daily risk limit</li>
+                    <li>4. Practice the Wizard Technique</li>
+                </ol>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-6">
+                <div class="text-center mb-4">
+                    <i class="fas fa-chart-line text-4xl text-blue-600"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-3">During Trading</h3>
+                <ol class="space-y-2 text-sm text-gray-700">
+                    <li>1. Notice emotional states</li>
+                    <li>2. Ask "How did I create this?"</li>
+                    <li>3. Use Wizard Technique if stressed</li>
+                    <li>4. Follow position sizing rules</li>
+                </ol>
+            </div>
+
+            <div class="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-xl p-6">
+                <div class="text-center mb-4">
+                    <i class="fas fa-moon text-4xl text-orange-600"></i>
+                </div>
+                <h3 class="font-semibold text-gray-800 mb-3">Evening (5 mins)</h3>
+                <ol class="space-y-2 text-sm text-gray-700">
+                    <li>1. Journal your trades & emotions</li>
+                    <li>2. Identify one improvement</li>
+                    <li>3. Rehearse better execution</li>
+                    <li>4. Celebrate rule-following</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Steps -->
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-xl p-8 text-white">
+        <h2 class="text-2xl font-bold mb-6 text-center">Your 30-Day Transformation Plan</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="font-semibold text-xl mb-4">Week 1-2: Foundation</h3>
+                <ul class="space-y-2 text-indigo-100">
+                    <li>✓ Take responsibility for everything</li>
+                    <li>✓ Start a trading journal</li>
+                    <li>✓ Practice the Wizard Technique daily</li>
+                    <li>✓ Identify your emotional triggers</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-semibold text-xl mb-4">Week 3-4: Implementation</h3>
+                <ul class="space-y-2 text-indigo-100">
+                    <li>✓ Mental rehearsal before trading</li>
+                    <li>✓ Apply strict position sizing</li>
+                    <li>✓ Review and improve daily</li>
+                    <li>✓ Simulate your system 100 times</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <p class="text-xl font-semibold mb-2">Remember Van Tharp's Ultimate Truth:</p>
+            <p class="text-2xl font-bold">"You don't trade the markets. You can only trade your beliefs about the markets."</p>
+        </div>
+    </div>
+
+    <!-- Resources -->
+    <div class="mt-12 bg-gray-100 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">📚 Learn More from Van Tharp</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-4">
+                <h3 class="font-semibold text-gray-800 mb-2">Essential Reading</h3>
+                <ul class="space-y-1 text-sm text-gray-600">
+                    <li>• Trade Your Way to Financial Freedom</li>
+                    <li>• Super Trader</li>
+                    <li>• The Definitive Guide to Position Sizing</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4">
+                <h3 class="font-semibold text-gray-800 mb-2">Key Concepts</h3>
+                <ul class="space-y-1 text-sm text-gray-600">
+                    <li>• R-Multiples</li>
+                    <li>• System Quality Number (SQN)</li>
+                    <li>• Tharp Think principles</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg p-4">
+                <h3 class="font-semibold text-gray-800 mb-2">Remember</h3>
+                <p class="text-sm text-gray-600">
+                    "Through repetition and practice, excellence becomes a habit."
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Money Management for Traders{% endblock %}</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Preline UI -->
+    <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                        accent: '#f59e0b',
+                        zerodha: '#387ed1'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Apple-inspired gradients for hero sections */
+        .apple-gradient-purple {
+            background: linear-gradient(180deg, #c084fc 0%, #e879f9 25%, #f472b6 50%, #fb7185 75%, #fda4af 100%);
+        }
+
+        .apple-gradient-blue {
+            background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 25%, #6366f1 50%, #8b5cf6 75%, #a78bfa 100%);
+        }
+
+        .apple-gradient-green {
+            background: linear-gradient(180deg, #34d399 0%, #10b981 25%, #14b8a6 50%, #06b6d4 75%, #22d3ee 100%);
+        }
+
+        .apple-gradient-orange {
+            background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 25%, #fb923c 50%, #f97316 75%, #ea580c 100%);
+        }
+
+        .apple-gradient-mesh {
+            background:
+                radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%),
+                radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+                radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+                radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+                radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+                radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+                radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+            background-color: #f3f4f6;
+        }
+
+        .apple-text-gradient {
+            background: linear-gradient(90deg, #1e3a8a 0%, #7c3aed 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animated-gradient {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .neon-border {
+            box-shadow: 0 0 0 2px #3b82f6, 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* iOS-style backdrop blur */
+        .backdrop-blur-ios {
+            backdrop-filter: saturate(180%) blur(20px);
+            background-color: rgba(255, 255, 255, 0.72);
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-4">
+        <nav class="max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between">
+            <div class="flex items-center justify-between">
+                <a class="flex items-center text-xl font-semibold text-gray-800" href="/">
+                    <i class="fas fa-chart-line text-blue-600 mr-2"></i>
+                    Marketcalls
+                </a>
+                <div class="sm:hidden">
+                    <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50" data-hs-collapse="#navbar-collapse" aria-controls="navbar-collapse" aria-label="Toggle navigation">
+                        <svg class="hs-collapse-open:hidden flex-shrink-0 w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        <svg class="hs-collapse-open:block hidden flex-shrink-0 w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="navbar-collapse" class="hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+                <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
+                    <a class="font-medium {% if request.endpoint == 'home' %}text-blue-600{% else %}text-gray-600 hover:text-gray-400{% endif %}" href="/">Home</a>
+                    <a class="font-medium {% if request.endpoint == 'metrics' %}text-blue-600{% else %}text-gray-600 hover:text-gray-400{% endif %}" href="/metrics">Metrics</a>
+                    <a class="font-medium {% if request.endpoint == 'calculators' %}text-blue-600{% else %}text-gray-600 hover:text-gray-400{% endif %}" href="/calculators">Calculators</a>
+                    <a class="font-medium {% if request.endpoint == 'psychology' %}text-blue-600{% else %}text-gray-600 hover:text-gray-400{% endif %}" href="/psychology">Psychology</a>
+                    <a class="font-medium {% if request.endpoint == 'quotes' %}text-blue-600{% else %}text-gray-600 hover:text-gray-400{% endif %}" href="/quotes">Wisdom</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1">
+                    <h3 class="text-white font-semibold text-lg mb-3">Marketcalls</h3>
+                    <p class="text-gray-400 text-sm">Professional money management education for traders, inspired by market wisdom.</p>
+                    <p class="text-gray-400 text-sm mt-2">
+                        <a href="https://marketcalls.in" target="_blank" class="text-blue-400 hover:text-blue-300">
+                            marketcalls.in
+                        </a>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-400 hover:text-white text-sm">Home</a></li>
+                        <li><a href="/metrics" class="text-gray-400 hover:text-white text-sm">Metrics</a></li>
+                        <li><a href="/calculators" class="text-gray-400 hover:text-white text-sm">Calculators</a></li>
+                        <li><a href="/psychology" class="text-gray-400 hover:text-white text-sm">Psychology</a></li>
+                        <li><a href="/quotes" class="text-gray-400 hover:text-white text-sm">Quotes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Trading Psychology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Risk Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Position Sizing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm">Portfolio Theory</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800">
+                <p class="text-center text-gray-400 text-sm">© 2024 Marketcalls. Educational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preline UI Script -->
+    <script src="https://preline.co/assets/js/preline.js"></script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

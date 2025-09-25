@@ -1,0 +1,331 @@
+{% extends "base.html" %}
+
+{% block title %}Money Management Metrics - Understanding Key Performance Indicators{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-400 to-indigo-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-400 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="floating absolute top-20 right-20 text-blue-200">
+            <i class="fas fa-percentage text-8xl"></i>
+        </div>
+        <div class="floating absolute bottom-20 left-20 text-purple-200" style="animation-delay: 3s;">
+            <i class="fas fa-chart-line text-8xl"></i>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white text-sm font-medium mb-6 shadow-lg">
+            <span class="mr-2">📊</span>
+            <span>Essential Trading Metrics</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+            Money Management
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Metrics</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl text-gray-700 mb-8 font-medium">
+            Master the numbers that define trading success
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-blue-100">
+                <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                <span class="font-medium">Win Rate Analysis</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-green-100">
+                <i class="fas fa-balance-scale text-green-500 mr-2"></i>
+                <span class="font-medium">Risk-Reward Ratios</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-purple-100">
+                <i class="fas fa-chart-bar text-purple-500 mr-2"></i>
+                <span class="font-medium">Performance Metrics</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Metrics Content -->
+<div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Metric 1: Win Rate -->
+    <div class="mb-12">
+        <div class="flex items-center mb-6">
+            <span class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold">1</span>
+            <h2 class="ml-4 text-2xl font-bold text-gray-800">Win Rate (Hit Rate)</h2>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-blue-800 mb-2">Formula</h3>
+                    <div class="bg-white rounded p-3 font-mono text-sm">
+                        Win Rate = (Winning Trades / Total Trades) × 100
+                    </div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h3 class="font-semibold text-gray-800 mb-3">What it tells you</h3>
+                    <p class="text-gray-600 mb-4">Win rate shows the percentage of your trades that are profitable. While important, it's not the only metric that matters. You can be profitable with a 40% win rate if your winners are much larger than your losers.</p>
+
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-700 mb-2">Example:</h4>
+                        <p class="text-gray-600">If you made 100 trades and 45 were profitable:</p>
+                        <p class="font-mono text-blue-600 mt-2">Win Rate = (45/100) × 100 = 45%</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-yellow-50 rounded-lg p-4">
+                <h3 class="font-semibold text-yellow-800 mb-2">Key Insights</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2"></i>
+                        Professional traders often have win rates between 40-60%
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2"></i>
+                        High win rate doesn't guarantee profitability
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-yellow-600 mt-1 mr-2"></i>
+                        Focus on expectancy, not just win rate
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Metric 2: Risk-Reward Ratio -->
+    <div class="mb-12">
+        <div class="flex items-center mb-6">
+            <span class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-600 text-white font-bold">2</span>
+            <h2 class="ml-4 text-2xl font-bold text-gray-800">Risk-Reward Ratio</h2>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-green-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-green-800 mb-2">Formula</h3>
+                    <div class="bg-white rounded p-3 font-mono text-sm">
+                        R:R = Average Win / Average Loss
+                    </div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h3 class="font-semibold text-gray-800 mb-3">What it tells you</h3>
+                    <p class="text-gray-600 mb-4">This ratio compares your average winning trade to your average losing trade. A ratio of 2:1 means you make ₹2 for every ₹1 you risk.</p>
+
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-700 mb-2">Example:</h4>
+                        <p class="text-gray-600">Average winning trade: ₹5,000</p>
+                        <p class="text-gray-600">Average losing trade: ₹2,000</p>
+                        <p class="font-mono text-green-600 mt-2">Risk-Reward Ratio = 5,000/2,000 = 2.5:1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-green-50 rounded-lg p-4">
+                <h3 class="font-semibold text-green-800 mb-2">Key Insights</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                        Minimum recommended ratio is 1.5:1
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                        Higher ratios allow for lower win rates
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                        With 2:1 ratio, you can be profitable with just 35% win rate
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Metric 3: Expectancy -->
+    <div class="mb-12">
+        <div class="flex items-center mb-6">
+            <span class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white font-bold">3</span>
+            <h2 class="ml-4 text-2xl font-bold text-gray-800">Expectancy</h2>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-purple-50 rounded-lg p-4">
+                    <h3 class="font-semibold text-purple-800 mb-2">Formula</h3>
+                    <div class="bg-white rounded p-3 font-mono text-sm">
+                        E = (WR × AW) - (LR × AL)
+                    </div>
+                </div>
+
+                <div class="md:col-span-2">
+                    <h3 class="font-semibold text-gray-800 mb-3">What it tells you</h3>
+                    <p class="text-gray-600 mb-4">Expectancy tells you how much you can expect to make (or lose) per trade on average. This is the most important metric for evaluating a trading system.</p>
+
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-700 mb-2">Example:</h4>
+                        <p class="text-gray-600">Win Rate: 45%, Average Win: ₹3,000</p>
+                        <p class="text-gray-600">Loss Rate: 55%, Average Loss: ₹1,500</p>
+                        <p class="font-mono text-purple-600 mt-2">Expectancy = (0.45 × 3,000) - (0.55 × 1,500) = ₹525 per trade</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-purple-50 rounded-lg p-4">
+                <h3 class="font-semibold text-purple-800 mb-2">Key Insights</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i>
+                        Positive expectancy is essential for long-term success
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i>
+                        Higher expectancy allows for more aggressive position sizing
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i>
+                        Track expectancy over at least 30-50 trades
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- More metrics -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <!-- Maximum Drawdown -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex items-center mb-4">
+                <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-600 text-white font-bold text-sm">4</span>
+                <h3 class="ml-3 text-xl font-bold text-gray-800">Maximum Drawdown</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Measures the largest peak-to-trough decline in your account value.</p>
+            <div class="bg-red-50 rounded-lg p-3">
+                <p class="font-mono text-sm">Max DD = (Peak - Trough) / Peak × 100</p>
+            </div>
+            <ul class="mt-4 space-y-1 text-sm text-gray-600">
+                <li>• Keep below 20-30%</li>
+                <li>• 50% drawdown needs 100% gain to recover</li>
+                <li>• Reduce size during drawdowns</li>
+            </ul>
+        </div>
+
+        <!-- Sharpe Ratio -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex items-center mb-4">
+                <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-600 text-white font-bold text-sm">5</span>
+                <h3 class="ml-3 text-xl font-bold text-gray-800">Sharpe Ratio</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Measures risk-adjusted returns - excess return per unit of risk.</p>
+            <div class="bg-indigo-50 rounded-lg p-3">
+                <p class="font-mono text-sm">SR = (Return - Risk-Free) / StdDev</p>
+            </div>
+            <ul class="mt-4 space-y-1 text-sm text-gray-600">
+                <li>• &lt; 1.0 = Poor returns</li>
+                <li>• 1.0-2.0 = Good returns</li>
+                <li>• &gt; 2.0 = Excellent returns</li>
+            </ul>
+        </div>
+
+        <!-- Profit Factor -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex items-center mb-4">
+                <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-600 text-white font-bold text-sm">6</span>
+                <h3 class="ml-3 text-xl font-bold text-gray-800">Profit Factor</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Shows how much you make for every rupee you lose.</p>
+            <div class="bg-teal-50 rounded-lg p-3">
+                <p class="font-mono text-sm">PF = Gross Profit / Gross Loss</p>
+            </div>
+            <ul class="mt-4 space-y-1 text-sm text-gray-600">
+                <li>• Above 1.5 is good</li>
+                <li>• Above 2.0 is excellent</li>
+                <li>• Below 1.0 means losing money</li>
+            </ul>
+        </div>
+
+        <!-- Recovery Factor -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+            <div class="flex items-center mb-4">
+                <span class="flex-shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-600 text-white font-bold text-sm">7</span>
+                <h3 class="ml-3 text-xl font-bold text-gray-800">Recovery Factor</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Shows how well your system recovers from drawdowns.</p>
+            <div class="bg-orange-50 rounded-lg p-3">
+                <p class="font-mono text-sm">RF = Net Profit / Max Drawdown</p>
+            </div>
+            <ul class="mt-4 space-y-1 text-sm text-gray-600">
+                <li>• Above 3.0 is good</li>
+                <li>• Shows system resilience</li>
+                <li>• Higher = smoother equity curve</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quick Reference Table -->
+    <div class="bg-white rounded-xl shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Quick Reference Table</h2>
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Metric</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Poor</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acceptable</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Good</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Excellent</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Win Rate</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">&lt; 30%</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-600">30-40%</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">40-55%</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">&gt; 55%</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Risk-Reward</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">&lt; 1:1</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-600">1:1 - 1.5:1</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">1.5:1 - 2:1</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">&gt; 2:1</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Max Drawdown</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">&gt; 40%</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-600">30-40%</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">20-30%</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">&lt; 20%</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Sharpe Ratio</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">&lt; 0.5</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-600">0.5 - 1.0</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">1.0 - 2.0</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">&gt; 2.0</td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Profit Factor</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600">&lt; 1.0</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-yellow-600">1.0 - 1.3</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-blue-600">1.3 - 1.8</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600">&gt; 1.8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

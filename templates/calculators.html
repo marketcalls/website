@@ -1,0 +1,438 @@
+{% extends "base.html" %}
+
+{% block title %}Money Management Calculators - Trading Tools{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-green-400 to-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-teal-400 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="floating absolute top-20 left-20 text-green-200">
+            <i class="fas fa-calculator text-8xl"></i>
+        </div>
+        <div class="floating absolute bottom-20 right-20 text-teal-200" style="animation-delay: 3s;">
+            <i class="fas fa-chart-pie text-8xl"></i>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-600 to-teal-600 rounded-full text-white text-sm font-medium mb-6 shadow-lg">
+            <span class="mr-2">🧮</span>
+            <span>Interactive Trading Tools</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+            Money Management
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-teal-600">Calculators</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl text-gray-700 mb-8 font-medium">
+            Essential tools for professional trading
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-green-100">
+                <i class="fas fa-coins text-yellow-500 mr-2"></i>
+                <span class="font-medium">Position Sizing</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-teal-100">
+                <i class="fas fa-balance-scale-right text-teal-500 mr-2"></i>
+                <span class="font-medium">Risk-Reward</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-emerald-100">
+                <i class="fas fa-percentage text-emerald-500 mr-2"></i>
+                <span class="font-medium">Kelly Criterion</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Calculators Container -->
+<div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Tabs Navigation -->
+    <div class="border-b border-gray-200">
+        <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+            <button class="tab-button active border-green-500 text-green-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-tab="position-sizing">
+                Position Size Calculator
+            </button>
+            <button class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-tab="risk-reward">
+                Risk-Reward Calculator
+            </button>
+            <button class="tab-button border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" data-tab="kelly">
+                Kelly Criterion Calculator
+            </button>
+        </nav>
+    </div>
+
+    <!-- Calculator Content -->
+    <div class="mt-8">
+        <!-- Position Sizing Calculator -->
+        <div id="position-sizing" class="calculator-tab">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Position Size Calculator</h2>
+                <p class="text-gray-600 mb-6">Calculate the optimal position size based on your risk tolerance and stop loss.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <form id="position-size-form">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Account Size (₹)
+                                </label>
+                                <input type="number" id="ps-account-size" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="100000" value="100000">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Risk Percentage (%)
+                                </label>
+                                <input type="number" id="ps-risk-percentage" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="2" value="2" step="0.5" max="10">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Stop Loss per Share (₹)
+                                </label>
+                                <input type="number" id="ps-stop-loss" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="50" value="50">
+                            </div>
+
+                            <button type="submit" class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">
+                                Calculate Position Size
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold text-gray-800 mb-4">Results</h3>
+                            <div id="ps-results" class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Risk Amount:</span>
+                                    <span class="font-semibold" id="ps-risk-amount">₹2,000</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Position Size:</span>
+                                    <span class="font-semibold text-green-600 text-xl" id="ps-position-size">40 shares</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Maximum Loss:</span>
+                                    <span class="font-semibold text-red-600" id="ps-max-loss">₹2,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 bg-blue-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-blue-800 mb-2">💡 Pro Tip</h4>
+                            <p class="text-sm text-gray-700">Never risk more than 2% of your account on a single trade. This ensures you can withstand at least 50 consecutive losses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk-Reward Calculator -->
+        <div id="risk-reward" class="calculator-tab hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Risk-Reward Calculator</h2>
+                <p class="text-gray-600 mb-6">Evaluate if a trade setup meets your risk-reward criteria.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <form id="risk-reward-form">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Entry Price (₹)
+                                </label>
+                                <input type="number" id="rr-entry-price" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="1000" value="1000">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Stop Loss Price (₹)
+                                </label>
+                                <input type="number" id="rr-stop-loss" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="950" value="950">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Target Price (₹)
+                                </label>
+                                <input type="number" id="rr-target-price" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="1100" value="1100">
+                            </div>
+
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                                Calculate Risk-Reward
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold text-gray-800 mb-4">Analysis</h3>
+                            <div id="rr-results" class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Risk:</span>
+                                    <span class="font-semibold text-red-600" id="rr-risk">₹50</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Reward:</span>
+                                    <span class="font-semibold text-green-600" id="rr-reward">₹100</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Risk-Reward Ratio:</span>
+                                    <span class="font-semibold text-blue-600 text-xl" id="rr-ratio">1:2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 bg-yellow-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-yellow-800 mb-2">📊 Trade Quality</h4>
+                            <div id="rr-quality" class="text-sm">
+                                <p class="text-green-700 font-semibold">✅ Good Trade Setup</p>
+                                <p class="text-gray-700 mt-1">Risk-reward ratio meets minimum criteria (1:1.5)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kelly Criterion Calculator -->
+        <div id="kelly" class="calculator-tab hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Kelly Criterion Calculator</h2>
+                <p class="text-gray-600 mb-6">Calculate the optimal bet size based on your trading edge and win rate.</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <form id="kelly-form">
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Win Rate (%)
+                                </label>
+                                <input type="number" id="kelly-win-rate" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="55" value="55" min="0" max="100">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Average Win (₹)
+                                </label>
+                                <input type="number" id="kelly-avg-win" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="2000" value="2000">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Average Loss (₹)
+                                </label>
+                                <input type="number" id="kelly-avg-loss" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500" placeholder="1000" value="1000">
+                            </div>
+
+                            <button type="submit" class="w-full bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition">
+                                Calculate Kelly Percentage
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold text-gray-800 mb-4">Optimal Allocation</h3>
+                            <div id="kelly-results" class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Full Kelly:</span>
+                                    <span class="font-semibold text-purple-600 text-xl" id="kelly-full">10%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Half Kelly (Recommended):</span>
+                                    <span class="font-semibold text-green-600 text-xl" id="kelly-half">5%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 bg-orange-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-orange-800 mb-2">⚠️ Important Note</h4>
+                            <p class="text-sm text-gray-700">The Kelly Criterion assumes accurate probability estimates. Most traders use "Half Kelly" (50% of suggested amount) for safety, as overestimating your edge can lead to ruin.</p>
+                        </div>
+
+                        <div class="mt-4 bg-gray-100 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">Formula</h4>
+                            <p class="text-sm font-mono text-gray-700">Kelly % = (p × b - q) / b</p>
+                            <p class="text-xs text-gray-600 mt-1">Where: p = win rate, q = loss rate, b = win/loss ratio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Educational Section -->
+    <div class="mt-12 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Understanding These Calculators</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="font-semibold text-gray-800 mb-2">Position Sizing</h3>
+                <p class="text-sm text-gray-600">Determines how many shares/contracts to buy based on your risk tolerance. This is the foundation of money management.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-gray-800 mb-2">Risk-Reward Analysis</h3>
+                <p class="text-sm text-gray-600">Evaluates whether a trade setup offers enough potential profit relative to the risk. Aim for at least 1:1.5 ratio.</p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-gray-800 mb-2">Kelly Criterion</h3>
+                <p class="text-sm text-gray-600">A mathematical formula that calculates the optimal bet size to maximize long-term growth while avoiding ruin.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Tab switching
+document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all tabs
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active', 'border-green-500', 'text-green-600', 'border-blue-500', 'text-blue-600', 'border-purple-500', 'text-purple-600');
+            btn.classList.add('border-transparent', 'text-gray-500');
+        });
+
+        // Add active class to clicked tab
+        button.classList.remove('border-transparent', 'text-gray-500');
+
+        const tabName = button.dataset.tab;
+        if (tabName === 'position-sizing') {
+            button.classList.add('active', 'border-green-500', 'text-green-600');
+        } else if (tabName === 'risk-reward') {
+            button.classList.add('active', 'border-blue-500', 'text-blue-600');
+        } else if (tabName === 'kelly') {
+            button.classList.add('active', 'border-purple-500', 'text-purple-600');
+        }
+
+        // Hide all calculator tabs
+        document.querySelectorAll('.calculator-tab').forEach(tab => {
+            tab.classList.add('hidden');
+        });
+
+        // Show selected tab
+        document.getElementById(tabName).classList.remove('hidden');
+    });
+});
+
+// Position Size Calculator
+document.getElementById('position-size-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+        type: 'position_size',
+        accountSize: document.getElementById('ps-account-size').value,
+        riskPercentage: document.getElementById('ps-risk-percentage').value,
+        stopLoss: document.getElementById('ps-stop-loss').value
+    };
+
+    try {
+        const response = await fetch('/api/calculate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        document.getElementById('ps-risk-amount').textContent = `₹${result.riskAmount.toLocaleString()}`;
+        document.getElementById('ps-position-size').textContent = `${result.positionSize.toLocaleString()} shares`;
+        document.getElementById('ps-max-loss').textContent = `₹${result.maxLoss.toLocaleString()}`;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+// Risk-Reward Calculator
+document.getElementById('risk-reward-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+        type: 'risk_reward',
+        entryPrice: document.getElementById('rr-entry-price').value,
+        stopLoss: document.getElementById('rr-stop-loss').value,
+        targetPrice: document.getElementById('rr-target-price').value
+    };
+
+    try {
+        const response = await fetch('/api/calculate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        document.getElementById('rr-risk').textContent = `₹${result.risk.toLocaleString()}`;
+        document.getElementById('rr-reward').textContent = `₹${result.reward.toLocaleString()}`;
+        document.getElementById('rr-ratio').textContent = `1:${result.ratio.toFixed(1)}`;
+
+        // Update quality assessment
+        const qualityDiv = document.getElementById('rr-quality');
+        if (result.ratio >= 2) {
+            qualityDiv.innerHTML = `
+                <p class="text-green-700 font-semibold">✅ Excellent Trade Setup</p>
+                <p class="text-gray-700 mt-1">Risk-reward ratio exceeds 1:2</p>
+            `;
+        } else if (result.ratio >= 1.5) {
+            qualityDiv.innerHTML = `
+                <p class="text-green-700 font-semibold">✅ Good Trade Setup</p>
+                <p class="text-gray-700 mt-1">Risk-reward ratio meets minimum criteria (1:1.5)</p>
+            `;
+        } else if (result.ratio >= 1) {
+            qualityDiv.innerHTML = `
+                <p class="text-yellow-700 font-semibold">⚠️ Marginal Trade Setup</p>
+                <p class="text-gray-700 mt-1">Consider looking for better opportunities</p>
+            `;
+        } else {
+            qualityDiv.innerHTML = `
+                <p class="text-red-700 font-semibold">❌ Poor Trade Setup</p>
+                <p class="text-gray-700 mt-1">Risk exceeds reward - avoid this trade</p>
+            `;
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+// Kelly Criterion Calculator
+document.getElementById('kelly-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = {
+        type: 'kelly_criterion',
+        winRate: document.getElementById('kelly-win-rate').value,
+        avgWin: document.getElementById('kelly-avg-win').value,
+        avgLoss: document.getElementById('kelly-avg-loss').value
+    };
+
+    try {
+        const response = await fetch('/api/calculate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        document.getElementById('kelly-full').textContent = `${result.kellyPercentage.toFixed(1)}%`;
+        document.getElementById('kelly-half').textContent = `${result.suggestedAllocation.toFixed(1)}%`;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+// Initialize with default calculations
+document.getElementById('position-size-form').dispatchEvent(new Event('submit'));
+document.getElementById('risk-reward-form').dispatchEvent(new Event('submit'));
+document.getElementById('kelly-form').dispatchEvent(new Event('submit'));
+</script>
+{% endblock %}

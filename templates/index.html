@@ -1,0 +1,379 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Money Management for Traders{% endblock %}
+
+{% block content %}
+<!-- Hero Section - New Modern Design -->
+<div class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <!-- Gradient Mesh Background -->
+    <div class="absolute inset-0 apple-gradient-mesh opacity-60"></div>
+
+    <!-- Animated Gradient Orbs -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-yellow-200 via-pink-200 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-200 via-blue-200 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-green-200 via-emerald-200 to-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center px-6 py-3 bg-black text-white rounded-full text-sm font-medium mb-8">
+                <span class="relative flex h-2 w-2 mr-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span>Trusted by 5,000+ Professional Traders</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black text-gray-900 mb-6 tracking-tight">
+                Money Management
+                <span class="block mt-2">
+                    <span class="relative">
+                        <span class="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 opacity-60 blur-lg"></span>
+                        <span class="relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent">Mastery</span>
+                    </span>
+                </span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-6 text-2xl sm:text-3xl text-gray-700 font-light max-w-3xl mx-auto">
+                Stop losing money. Start trading like a professional with
+                <span class="font-semibold text-gray-900">proven risk management</span> strategies.
+            </p>
+
+            <!-- Value Props -->
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
+                    <div class="text-4xl font-bold text-transparent bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text">2%</div>
+                    <p class="mt-2 text-sm text-gray-600 font-medium">Max Risk Per Trade</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
+                    <div class="text-4xl font-bold text-transparent bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text">1:2</div>
+                    <p class="mt-2 text-sm text-gray-600 font-medium">Min Risk-Reward</p>
+                </div>
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
+                    <div class="text-4xl font-bold text-transparent bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text">98%</div>
+                    <p class="mt-2 text-sm text-gray-600 font-medium">Success Rate</p>
+                </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/metrics" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gray-900 rounded-2xl hover:bg-gray-800 transition-all transform hover:scale-105">
+                    <span>Start Learning</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="/calculators" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-gray-900 bg-white border-2 border-gray-900 rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105">
+                    <span>Try Calculators</span>
+                    <i class="fas fa-calculator ml-2 group-hover:rotate-12 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="mt-16 flex flex-wrap justify-center items-center gap-8 text-gray-500">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-alt text-green-500"></i>
+                    <span class="text-sm font-medium">Bank-Level Security</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-users text-blue-500"></i>
+                    <span class="text-sm font-medium">Active Community</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-graduation-cap text-purple-500"></i>
+                    <span class="text-sm font-medium">Expert Instructors</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div class="flex flex-col items-center">
+            <span class="text-xs text-gray-500 uppercase tracking-wider mb-2">Scroll</span>
+            <div class="w-5 h-8 border-2 border-gray-400 rounded-full flex justify-center">
+                <div class="w-1 h-2 bg-gray-600 rounded-full mt-1.5 animate-bounce"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Money Management Section -->
+<div class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">Why This Matters</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Essential skills every successful trader must master</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="group relative">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                <div class="relative bg-white rounded-2xl p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Preserve Capital</h3>
+                    <p class="text-gray-600">The first rule of trading is capital preservation. Learn defensive strategies.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="group relative">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                <div class="relative bg-white rounded-2xl p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Steady Growth</h3>
+                    <p class="text-gray-600">Compound your gains with proper position sizing and risk management.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="group relative">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                <div class="relative bg-white rounded-2xl p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-balance-scale text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Risk Control</h3>
+                    <p class="text-gray-600">Master the 2% rule and other professional risk management techniques.</p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="group relative">
+                <div class="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000"></div>
+                <div class="relative bg-white rounded-2xl p-8">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Mental Edge</h3>
+                    <p class="text-gray-600">Reduce emotional stress with systematic money management.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Core Principles Section -->
+<div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">Core Principles</h2>
+            <p class="text-xl text-gray-600">The foundation of professional trading</p>
+        </div>
+
+        <div class="space-y-8 max-w-4xl mx-auto">
+            <!-- Principle 1 -->
+            <div class="flex flex-col md:flex-row items-start gap-6 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl">
+                <div class="flex-shrink-0">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">01</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">The 2% Rule</h3>
+                    <p class="text-gray-700 mb-4">Never risk more than 2% of your capital on a single trade. This ensures survival through losing streaks.</p>
+                    <div class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        <span class="font-medium">₹1,00,000 capital = ₹2,000 max risk</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principle 2 -->
+            <div class="flex flex-col md:flex-row items-start gap-6 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl">
+                <div class="flex-shrink-0">
+                    <div class="w-16 h-16 bg-green-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">02</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Risk-Reward Ratio</h3>
+                    <p class="text-gray-700 mb-4">Target trades where potential reward is at least 2x the risk. Win less, earn more.</p>
+                    <div class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg">
+                        <i class="fas fa-chart-bar mr-2"></i>
+                        <span class="font-medium">Risk ₹1,000 to make ₹2,000+</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principle 3 -->
+            <div class="flex flex-col md:flex-row items-start gap-6 p-8 bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl">
+                <div class="flex-shrink-0">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">03</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Position Sizing</h3>
+                    <p class="text-gray-700 mb-4">Calculate exact position sizes based on stop loss and risk tolerance. Never guess.</p>
+                    <div class="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg">
+                        <i class="fas fa-calculator mr-2"></i>
+                        <span class="font-medium">Position = Risk Amount ÷ Stop Distance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principle 4 -->
+            <div class="flex flex-col md:flex-row items-start gap-6 p-8 bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl">
+                <div class="flex-shrink-0">
+                    <div class="w-16 h-16 bg-orange-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold">04</div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Drawdown Management</h3>
+                    <p class="text-gray-700 mb-4">Plan for inevitable losing streaks. Reduce size after 20% drawdown to preserve capital.</p>
+                    <div class="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg">
+                        <i class="fas fa-shield-alt mr-2"></i>
+                        <span class="font-medium">Survival first, profits second</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Statistics Section -->
+<div class="py-24 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-black text-white mb-4">The Reality Check</h2>
+            <p class="text-xl text-gray-300">Numbers that should wake you up</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="text-5xl sm:text-6xl font-black text-transparent bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text mb-2">90%</div>
+                <p class="text-gray-400">Traders fail due to poor money management</p>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl sm:text-6xl font-black text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-2">2%</div>
+                <p class="text-gray-400">Maximum risk pros take per trade</p>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl sm:text-6xl font-black text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-2">1:2</div>
+                <p class="text-gray-400">Minimum risk-reward for consistency</p>
+            </div>
+            <div class="text-center">
+                <div class="text-5xl sm:text-6xl font-black text-transparent bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text mb-2">50</div>
+                <p class="text-gray-400">Trades you survive with 2% rule</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Learning Path Section - Redesigned -->
+<div class="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-black text-gray-900 mb-4">Your Learning Journey</h2>
+            <p class="text-xl text-gray-600">Master money management step by step</p>
+        </div>
+
+        <!-- Modern Card-Based Journey -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Step 1 -->
+            <a href="/" class="group relative block">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-6 shadow-xl transform group-hover:-translate-y-1 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-bold text-blue-600 uppercase tracking-wider">Step 1</span>
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-home text-blue-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Foundation</h3>
+                    <p class="text-gray-600 text-sm">Understand why money management is the difference between success and failure.</p>
+                    <div class="mt-4 flex items-center text-blue-600 font-medium text-sm">
+                        <span>Start here</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Step 2 -->
+            <a href="/metrics" class="group relative block">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-6 shadow-xl transform group-hover:-translate-y-1 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-bold text-purple-600 uppercase tracking-wider">Step 2</span>
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-bar text-purple-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Key Metrics</h3>
+                    <p class="text-gray-600 text-sm">Learn Sharpe ratio, win rate, expectancy and other vital performance metrics.</p>
+                    <div class="mt-4 flex items-center text-purple-600 font-medium text-sm">
+                        <span>Explore metrics</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Step 3 -->
+            <a href="/calculators" class="group relative block">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-6 shadow-xl transform group-hover:-translate-y-1 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-bold text-green-600 uppercase tracking-wider">Step 3</span>
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-calculator text-green-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Practice Tools</h3>
+                    <p class="text-gray-600 text-sm">Use calculators for position sizing, risk-reward, and Kelly criterion.</p>
+                    <div class="mt-4 flex items-center text-green-600 font-medium text-sm">
+                        <span>Try calculators</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Step 4 -->
+            <a href="/psychology" class="group relative block">
+                <div class="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl transform -rotate-1 group-hover:-rotate-2 transition-transform"></div>
+                <div class="relative bg-white rounded-2xl p-6 shadow-xl transform group-hover:-translate-y-1 transition-transform">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-bold text-orange-600 uppercase tracking-wider">Step 4</span>
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-brain text-orange-600"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Psychology</h3>
+                    <p class="text-gray-600 text-sm">Master your mind with Van Tharp's proven trading psychology methods.</p>
+                    <div class="mt-4 flex items-center text-orange-600 font-medium text-sm">
+                        <span>Train your mind</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mt-16 max-w-3xl mx-auto">
+            <div class="bg-gray-200 rounded-full h-3 overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-full rounded-full" style="width: 25%;"></div>
+            </div>
+            <p class="text-center mt-4 text-gray-600">You're at the beginning of an amazing journey</p>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="py-24 bg-gradient-to-r from-purple-600 to-blue-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-6">Ready to Transform Your Trading?</h2>
+        <p class="text-xl text-blue-100 mb-8">Join thousands who've mastered money management</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/metrics" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-purple-600 bg-white rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105">
+                <span>Start Learning Now</span>
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="/calculators" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white border-2 border-white rounded-2xl hover:bg-white hover:text-purple-600 transition-all">
+                <span>Try Our Tools</span>
+                <i class="fas fa-calculator ml-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

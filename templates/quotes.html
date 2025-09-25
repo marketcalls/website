@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+
+{% block title %}Trading Wisdom - Quotes from Industry Veterans{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/3 w-96 h-96 bg-gradient-to-br from-orange-400 to-red-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/3 w-96 h-96 bg-gradient-to-br from-red-400 to-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="floating absolute top-20 left-20 text-orange-200">
+            <i class="fas fa-quote-left text-8xl"></i>
+        </div>
+        <div class="floating absolute bottom-20 right-20 text-red-200" style="animation-delay: 3s;">
+            <i class="fas fa-quote-right text-8xl"></i>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-600 to-red-600 rounded-full text-white text-sm font-medium mb-6 shadow-lg">
+            <span class="mr-2">🌟</span>
+            <span>Timeless Trading Wisdom</span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-6">
+            Wisdom from
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-red-600">Trading Legends</span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl text-gray-700 mb-8 font-medium">
+            Learn from those who've mastered the markets
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-orange-100">
+                <i class="fas fa-user-tie text-orange-500 mr-2"></i>
+                <span class="font-medium">Market Wizards</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-red-100">
+                <i class="fas fa-lightbulb text-red-500 mr-2"></i>
+                <span class="font-medium">Proven Strategies</span>
+            </div>
+            <div class="bg-white rounded-full px-6 py-3 text-gray-700 shadow-lg border border-pink-100">
+                <i class="fas fa-graduation-cap text-pink-500 mr-2"></i>
+                <span class="font-medium">Life Lessons</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quotes Content -->
+<div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Featured Quote -->
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 mb-12 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <i class="fas fa-quote-left text-4xl mb-4 opacity-50"></i>
+            <p class="text-2xl font-light mb-4">
+                "The key to trading success is emotional discipline. If intelligence were the key, there would be a lot more people making money trading."
+            </p>
+            <div class="flex items-center justify-center space-x-3">
+                <div class="w-12 h-0.5 bg-white opacity-50"></div>
+                <p class="font-semibold">Victor Sperandeo</p>
+                <div class="w-12 h-0.5 bg-white opacity-50"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Money Management Quotes Grid -->
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">On Money Management</h2>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <!-- Paul Tudor Jones -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-tie text-blue-600"></i>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-gray-700 mb-3 italic">
+                        "The most important rule of trading is to play great defense, not great offense."
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-semibold text-gray-800">Paul Tudor Jones</p>
+                        <span class="text-xs text-gray-500">Hedge Fund Manager</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Warren Buffett -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-tie text-green-600"></i>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-gray-700 mb-3 italic">
+                        "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1."
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-semibold text-gray-800">Warren Buffett</p>
+                        <span class="text-xs text-gray-500">Oracle of Omaha</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- George Soros -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-tie text-purple-600"></i>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-gray-700 mb-3 italic">
+                        "It's not whether you're right or wrong, but how much money you make when you're right and how much you lose when you're wrong."
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-semibold text-gray-800">George Soros</p>
+                        <span class="text-xs text-gray-500">Legendary Investor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ray Dalio -->
+        <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                        <i class="fas fa-user-tie text-yellow-600"></i>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-gray-700 mb-3 italic">
+                        "He who lives by the crystal ball will eat shattered glass. The biggest mistake investors make is to believe that what happened in the recent past is likely to persist."
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-semibold text-gray-800">Ray Dalio</p>
+                        <span class="text-xs text-gray-500">Bridgewater Founder</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Risk Management Quotes -->
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">On Risk Management</h2>
+
+    <div class="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-8 mb-12">
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Ed Seykota -->
+            <div class="text-center">
+                <i class="fas fa-exclamation-triangle text-3xl text-orange-500 mb-3"></i>
+                <p class="text-gray-700 italic mb-2">
+                    "The elements of good trading are: (1) cutting losses, (2) cutting losses, and (3) cutting losses."
+                </p>
+                <p class="font-semibold text-gray-800">Ed Seykota</p>
+                <p class="text-xs text-gray-500">Market Wizard</p>
+            </div>
+
+            <!-- Larry Hite -->
+            <div class="text-center">
+                <i class="fas fa-shield-alt text-3xl text-red-500 mb-3"></i>
+                <p class="text-gray-700 italic mb-2">
+                    "Throughout my financial career, I have continually witnessed examples of other people that I have known being ruined by a failure to respect risk."
+                </p>
+                <p class="font-semibold text-gray-800">Larry Hite</p>
+                <p class="text-xs text-gray-500">Systematic Trader</p>
+            </div>
+
+            <!-- Mark Douglas -->
+            <div class="text-center">
+                <i class="fas fa-brain text-3xl text-pink-500 mb-3"></i>
+                <p class="text-gray-700 italic mb-2">
+                    "The consistency you seek is in your mind, not in the markets."
+                </p>
+                <p class="font-semibold text-gray-800">Mark Douglas</p>
+                <p class="text-xs text-gray-500">Trading Psychologist</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trading Psychology -->
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">On Trading Psychology</h2>
+
+    <div class="space-y-6 mb-12">
+        <!-- Jesse Livermore -->
+        <div class="bg-white border-l-4 border-blue-600 rounded-r-xl shadow-lg p-6">
+            <p class="text-lg text-gray-700 mb-3">
+                "The game of speculation is the most uniformly fascinating game in the world. But it is not a game for the stupid, the mentally lazy, the person of inferior emotional balance, or the get-rich-quick adventurer."
+            </p>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-bold text-gray-800">Jesse Livermore</p>
+                    <p class="text-sm text-gray-500">Legendary Trader (1877-1940)</p>
+                </div>
+                <div class="text-blue-600">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- William O'Neil -->
+        <div class="bg-white border-l-4 border-green-600 rounded-r-xl shadow-lg p-6">
+            <p class="text-lg text-gray-700 mb-3">
+                "The whole secret to winning in the stock market is to lose the least amount possible when you're not right."
+            </p>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-bold text-gray-800">William O'Neil</p>
+                    <p class="text-sm text-gray-500">Founder of Investor's Business Daily</p>
+                </div>
+                <div class="text-green-600">
+                    <i class="fas fa-newspaper text-2xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jack Schwager -->
+        <div class="bg-white border-l-4 border-purple-600 rounded-r-xl shadow-lg p-6">
+            <p class="text-lg text-gray-700 mb-3">
+                "There is no single market secret to discover, no single correct way to trade the markets. Those seeking the one true answer to the markets haven't even gotten as far as asking the right question, let alone getting the right answer."
+            </p>
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-bold text-gray-800">Jack Schwager</p>
+                    <p class="text-sm text-gray-500">Author of Market Wizards</p>
+                </div>
+                <div class="text-purple-600">
+                    <i class="fas fa-book text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indian Market Veterans -->
+    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Indian Market Veterans</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Rakesh Jhunjhunwala -->
+        <div class="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6">
+            <div class="mb-4">
+                <div class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto">
+                    <i class="fas fa-rupee-sign text-2xl text-orange-600"></i>
+                </div>
+            </div>
+            <p class="text-gray-700 italic text-center mb-3">
+                "Risk comes from not knowing what you are doing."
+            </p>
+            <p class="font-bold text-gray-800 text-center">Rakesh Jhunjhunwala</p>
+            <p class="text-xs text-gray-500 text-center">Big Bull of Dalal Street</p>
+        </div>
+
+        <!-- Radhakishan Damani -->
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6">
+            <div class="mb-4">
+                <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto">
+                    <i class="fas fa-store text-2xl text-blue-600"></i>
+                </div>
+            </div>
+            <p class="text-gray-700 italic text-center mb-3">
+                "Keep it simple. Buy good businesses at reasonable prices."
+            </p>
+            <p class="font-bold text-gray-800 text-center">Radhakishan Damani</p>
+            <p class="text-xs text-gray-500 text-center">DMart Founder</p>
+        </div>
+
+        <!-- Nithin Kamath -->
+        <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6">
+            <div class="mb-4">
+                <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto">
+                    <i class="fas fa-chart-bar text-2xl text-green-600"></i>
+                </div>
+            </div>
+            <p class="text-gray-700 italic text-center mb-3">
+                "Trading is a marathon, not a sprint. Focus on risk management and the profits will follow."
+            </p>
+            <p class="font-bold text-gray-800 text-center">Nithin Kamath</p>
+            <p class="text-xs text-gray-500 text-center">Zerodha Founder</p>
+        </div>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-8 text-white">
+        <h2 class="text-2xl font-bold mb-6 text-center">Key Takeaways from the Masters</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="text-center">
+                <i class="fas fa-shield-alt text-3xl mb-2 text-yellow-400"></i>
+                <h3 class="font-semibold mb-1">Protect Capital</h3>
+                <p class="text-sm text-gray-300">Defense wins championships</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-cut text-3xl mb-2 text-red-400"></i>
+                <h3 class="font-semibold mb-1">Cut Losses</h3>
+                <p class="text-sm text-gray-300">Small losses, big wins</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-brain text-3xl mb-2 text-blue-400"></i>
+                <h3 class="font-semibold mb-1">Master Psychology</h3>
+                <p class="text-sm text-gray-300">Control emotions, not markets</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-balance-scale text-3xl mb-2 text-green-400"></i>
+                <h3 class="font-semibold mb-1">Risk-Reward</h3>
+                <p class="text-sm text-gray-300">Asymmetric opportunities</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
