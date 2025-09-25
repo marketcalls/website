@@ -360,19 +360,53 @@
 </div>
 
 <!-- CTA Section -->
-<div class="py-24 bg-gradient-to-r from-purple-600 to-blue-600">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-4xl sm:text-5xl font-black text-white mb-6">Ready to Transform Your Trading?</h2>
-        <p class="text-xl text-blue-100 mb-8">Join thousands who've mastered money management</p>
+<div class="relative py-24 overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+    <!-- Animated Background -->
+    <div class="absolute inset-0">
+        <div class="absolute top-20 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+        <div class="absolute bottom-20 right-20 w-72 h-72 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-sm font-medium mb-6">
+            <span class="animate-pulse mr-2">🚀</span>
+            <span>Join 5,000+ Successful Traders</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 mb-6">
+            Ready to Transform Your
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Trading?</span>
+        </h2>
+
+        <p class="text-xl sm:text-2xl text-gray-700 mb-12 max-w-2xl mx-auto">
+            Stop losing money. Start implementing <span class="font-semibold">professional money management</span> strategies today.
+        </p>
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/metrics" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-purple-600 bg-white rounded-2xl hover:bg-gray-100 transition-all transform hover:scale-105">
+            <a href="/metrics" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-xl">
                 <span>Start Learning Now</span>
-                <i class="fas fa-arrow-right ml-2"></i>
+                <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
-            <a href="/calculators" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white border-2 border-white rounded-2xl hover:bg-white hover:text-purple-600 transition-all">
+            <a href="/calculators" class="group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-purple-600 bg-white border-2 border-purple-600 rounded-2xl hover:bg-purple-50 transition-all transform hover:scale-105 shadow-xl">
                 <span>Try Our Tools</span>
-                <i class="fas fa-calculator ml-2"></i>
+                <i class="fas fa-calculator ml-2 group-hover:rotate-12 transition-transform"></i>
             </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="mt-12 flex flex-wrap justify-center items-center gap-6 text-gray-600">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-lock text-green-500"></i>
+                <span class="text-sm font-medium">100% Free</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-clock text-blue-500"></i>
+                <span class="text-sm font-medium">5 Min Setup</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-star text-yellow-500"></i>
+                <span class="text-sm font-medium">4.9/5 Rating</span>
+            </div>
         </div>
     </div>
 </div>
